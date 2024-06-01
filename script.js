@@ -6,7 +6,7 @@ import { mapFunctionality } from "./renderMap.js";
 
 const sideMenu = document.getElementById('sideMenu')
 const htmlContent = document.querySelector('.countryDesc-container');
-const continentList = document.querySelector('.continent__list');
+
 
 const errMsg = document.querySelector('.error')
 
@@ -37,11 +37,12 @@ showContinents();
 
 
 const showCountriesByContinent = async function(continent) {
+    const countriesList = document.getElementById('countries-list');
     
     const countryText = document.getElementById('country__text')
     try {
         errMsg.innerHTML = ''
-        continentList.innerHTML = ''
+        countriesList.innerHTML = ''
 
         showLoader()
 
