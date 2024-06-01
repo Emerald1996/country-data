@@ -40,6 +40,8 @@ const showCountriesByContinent = async function(continent) {
     try {
         errMsg.innerHTML = ''
 
+        showLoader()
+
         const response = await fetch(`${CONTINENTS_API}${continent}`);
 
         countryText.textContent = `These are all countries under ${continent.toUpperCase()}`
@@ -50,7 +52,10 @@ const showCountriesByContinent = async function(continent) {
         const countries = await response.json();
         // console.log(countries);
         showCountries(countries);
+
+        removeLoader()
         } catch (error) {
+        renderError('Something went wrong', 'red')
         console.error('Failed to fetch countries:', error);
     }
 }
