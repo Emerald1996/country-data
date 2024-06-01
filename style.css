@@ -206,7 +206,7 @@ html{
         padding-top: 50px;
         width: 200px;
         height: 100vh;
-        z-index: 999;
+        z-index: 1000;
         background: linear-gradient(to right, black, grey);
         transition: 0.5s;
     }
@@ -239,15 +239,18 @@ html{
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+    #country__text{
+        font-size: 1.2rem;
+    }
 
     #container main {
         flex-direction: column;
-        padding-bottom: 50% !important;
+        padding-bottom: 30% !important;
     }
 
     #map{
         width: 300px;
-        z-index: -999;
+        /* z-index: -999; */
     }
     .country-item{
         width: 70%;
